@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+    - name: check if key-pair exists
+      stat: path=~/.ssh/labtestkey
+      register: key_file
+
+    - name: generate SSH key-pair
+      shell: ssh-keygen -b 2048 -t rsa -f ~/.ssh/labtestkey -q -N ""
+      when: key_file.stat.exists == False
+
+- hosts: labradoodle
+  gather_facts: False
+  tasks:
+    - name: distribute public key
+      authorized_key: user=vagrant
+                      key="{{ lookup('file', '~/.ssh/labtestkey.pub') }}"
+                      state=present
