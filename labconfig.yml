@@ -1,5 +1,7 @@
 ---
 - hosts: labradoodle
   become: yes
+  vars:
   roles:
     - common
+    - grycap.devstack
