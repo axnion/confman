@@ -4,4 +4,4 @@
   vars:
   roles:
     - common
-    - grycap.devstack
+    - devstack

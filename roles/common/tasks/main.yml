@@ -3,3 +3,8 @@
   apt:
     update_cache: yes
     upgrade: yes
+
+- name: Install Git
+  apt:
+    name: git
+    state: present
