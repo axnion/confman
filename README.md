@@ -1,1 +1,1 @@
-# labconfig
+# Home Configuration
