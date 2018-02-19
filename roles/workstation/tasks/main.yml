@@ -1,17 +1,15 @@
 # Installing Google Chrome
 - name: google chrome - adding key
-  command: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    state: present
 
-- name: google chrome - settings repository
+- name: google chrome - setting repository
   apt_repository:
     repo: deb http://dl.google.com/linux/chrome/deb/ stable main
     state: present
 
 - name: google chrome - installing
   apt:
-    name: google-chrome-stable
     update_cache: yes
-    upgrade: yes
-
-
-
+    name: google-chrome-stable
