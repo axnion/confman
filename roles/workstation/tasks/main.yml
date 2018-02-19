@@ -1,3 +1,7 @@
+# Include software installations
+
+# Include configuration files
+
 # Installing Google Chrome
 - name: google chrome - adding key
   apt_key:

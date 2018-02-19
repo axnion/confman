@@ -1,7 +1,0 @@
----
-- hosts: labradoodle
-  become: yes
-  vars:
-  roles:
-    - common
-    - devstack
