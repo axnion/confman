@@ -2,11 +2,12 @@
 - hosts: workstation
   become: yes
   roles:
-    - common
-    - golang
-    - java
-    - nodejs
-    - google_chrome
-    - tmux
-    - vscode
+#    - common
     - workstation_config
+#    - golang
+#    - java
+#    - nodejs
+#    - google_chrome
+#    - tmux
+#    - vscode
+    - powerline-go
