@@ -1,0 +1,9 @@
+# Installing Visual Studio Code using snap
+
+- name: checking vscode installed
+  command: vscode
+  register: vscode_installed
+
+- name: run snap install for vscode
+  command: snap install --classic vscode
+  when: vscode_installed == false

@@ -1,19 +1,17 @@
-# Include software installations
+# Installs Google Chrome stable
+# Based on this post: https://askubuntu.com/questions/510056/how-to-install-google-chrome
 
-# Include configuration files
-
-# Installing Google Chrome
-- name: google chrome - adding key
+- name: adding key
   apt_key:
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
     state: present
 
-- name: google chrome - setting repository
+- name: adding apt repository
   apt_repository:
     repo: deb http://dl.google.com/linux/chrome/deb/ stable main
     state: present
 
-- name: google chrome - installing
+- name: installing
   apt:
     update_cache: yes
     name: google-chrome-stable

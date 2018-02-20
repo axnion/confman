@@ -2,4 +2,7 @@
 - hosts: workstation
   become: yes
   roles:
-    - workstation
+    - common
+    - golang
+    - google_chrome
+    - vscode
