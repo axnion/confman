@@ -1,8 +1,10 @@
 # Installing Visual Studio Code using snap
 
 - name: checking vscode installed
-  command: vscode
+  become: false
+  command: vscode --user-data-dir /tmp -v
   register: vscode_installed
+  changed_when: false
 
 - name: run snap install for vscode
   command: snap install --classic vscode
