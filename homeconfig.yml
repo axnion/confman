@@ -3,11 +3,12 @@
   become: yes
   roles:
 #    - common
-    - workstation_config
+    - graphics_drivers
+#    - workstation_config
 #    - golang
 #    - java
 #    - nodejs
 #    - google_chrome
 #    - tmux
 #    - vscode
-    - powerline-go
+#    - powerline-go
