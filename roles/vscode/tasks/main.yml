@@ -2,10 +2,11 @@
 
 - name: checking vscode installed
   become: false
-  command: vscode --user-data-dir /tmp -v
-  register: vscode_installed
-  changed_when: false
+  command: vscode -v
+  register: result
+  changed_when: no
+  ignore_errors: true
 
 - name: run snap install for vscode
   command: snap install --classic vscode
-  when: vscode_installed == false
+  when: result|failed
