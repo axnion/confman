@@ -1,8 +1,6 @@
 # Home Configuration
 
-## Setup
-
 * lsl (main workstation)
     * Ubuntu 17.10
-* labradoodle (playground server)
+* labradoodle (lab-server)
     * Currently not in use

@@ -4,5 +4,6 @@
   roles:
     - common
     - golang
+    - nodejs
     - google_chrome
     - vscode
