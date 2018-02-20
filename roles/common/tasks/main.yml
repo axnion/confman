@@ -1,10 +1,10 @@
 ---
-- name: Update software
+- name: upgrading software from apt
   apt:
     update_cache: yes
     upgrade: yes
 
-- name: Install Git
+- name: install git
   apt:
     name: git
     state: present

@@ -1,0 +1,37 @@
+- name: download dotfile repository
+  become: no
+  git:
+    repo: https://github.com/axnion/dotfiles.git
+    dest: ~/dotfiles
+
+- name: creating symlink .bashrc
+  become: no
+  file:
+    src: ~/dotfiles/bashrc
+    dest: ~/.bashrc
+    owner: axnion
+    state: link
+
+- name: creating symlink .nanorc
+  become: no
+  file:
+    src: ~/dotfiles/nanorc
+    dest: ~/.nanorc
+    owner: axnion
+    state: link
+
+- name: creating symlink .tmux.conf
+  become: no
+  file:
+    src: ~/dotfiles/tmux.conf
+    dest: ~/.tmux.conf
+    owner: axnion
+    state: link
+
+- name: creating symlink .vimrc
+  become: no
+  file:
+    src: ~/dotfiles/vimrc
+    dest: ~/.vimrc
+    owner: axnion
+    state: link
