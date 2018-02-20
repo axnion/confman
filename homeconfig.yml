@@ -6,5 +6,6 @@
     - golang
     - nodejs
     - google_chrome
+    - tmux
     - vscode
     - workstation_config
