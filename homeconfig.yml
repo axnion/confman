@@ -4,6 +4,7 @@
   roles:
     - common
     - golang
+    - java
     - nodejs
     - google_chrome
     - tmux
