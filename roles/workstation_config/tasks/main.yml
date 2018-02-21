@@ -49,3 +49,11 @@
     dest: ~/.vimrc
     owner: axnion
     state: link
+
+- name: create github ssh key
+  become: no
+  user:
+    name: axnion
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: .ssh/github
