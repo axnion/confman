@@ -6,9 +6,8 @@
     - graphics_drivers
     - workstation_config
     - golang
-#    - java
+    - java
     - nodejs
     - google_chrome
-    - tmux
     - vscode
     - powerline-go

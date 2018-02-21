@@ -1,3 +1,4 @@
 # Installing powerline-go with go get
 - name: installing/update powerline-go
+  become: false
   command: go get -u github.com/justjanne/powerline-go

@@ -1,10 +1,22 @@
 # Downloading dotfiles repository and create symlinks
-
 - name: download dotfile repository
   become: no
   git:
     repo: https://github.com/axnion/dotfiles.git
     dest: ~/dotfiles
+
+- name: getting .bashrc status
+  become: no
+  stat:
+    path: ~/.bashrc
+  register: sym
+
+- name: removing .bashrc if not symlink
+  become: no
+  file:
+    path: ~/.bashrc
+    state: absent
+  when: not sym.stat.islnk
 
 - name: creating symlink .bashrc
   become: no

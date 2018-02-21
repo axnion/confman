@@ -1,10 +1,10 @@
 # Install golang
 - name: adding repository
   apt_repository:
-    repo: 'ppa:gophers/archive'
+    repo: ppa:gophers/archive
     state: present
 
-- name: installing golang 1.9
+- name: installing
   apt:
-    name: golang-1.9-go
+    name: golang-go
     update_cache: yes
