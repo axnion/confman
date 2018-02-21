@@ -1,0 +1,4 @@
+# Installing KeePassX
+- name: installing
+  apt:
+    name: keepassx
