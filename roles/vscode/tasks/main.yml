@@ -1,5 +1,4 @@
 # Installing Visual Studio Code using snap
-
 - name: checking vscode installed
   become: false
   command: vscode -v
@@ -10,3 +9,8 @@
 - name: run snap install for vscode
   command: snap install --classic vscode
   when: result|failed
+
+- name: installing extensions
+  become: no
+  command: code --install-extension {{ item }}
+  with_items: "{{ extensions }}"
