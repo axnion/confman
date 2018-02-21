@@ -1,7 +1,7 @@
 # Installing Spotify using snap
 - name: checking if spotify installed
   become: false
-  command: spotify
+  command: timeout 5 spotify
   register: result
   changed_when: no
   ignore_errors: true
