@@ -1,0 +1,11 @@
+# Installing Jetbrains Goland using Snap
+- name: check if installed
+  become: false
+  shell: type "goland"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: intalling
+  command: snap install --classic goland
+  when: result|failed
