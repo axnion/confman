@@ -1,0 +1,11 @@
+# Installing Jetbrains Intellij Idea Ultimate Edition using Snap
+- name: check if installed
+  become: false
+  shell: type "intellij-idea-ultimate"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: intalling
+  command: snap install --classic intellij-idea-ultimate
+  when: result|failed
