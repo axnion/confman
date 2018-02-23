@@ -10,9 +10,12 @@
     - nodejs
     - google_chrome
     - vscode
+    - intellij-idea
+    - goland
     - powerline-go
     - spotify
     - slack
     - dropbox
     - keepassx
     - other
+

@@ -1,2 +1,11 @@
-- name: install slack from snap
+# Installing slack
+- name: check if installed
+  become: false
+  shell: type "slack"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing
   command: snap install --classic slack
+  when: result|failed
