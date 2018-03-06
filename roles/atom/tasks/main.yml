@@ -1,0 +1,11 @@
+# Installing Atom - the hackable text editor
+- name: checking atom installed
+  become: false
+  shell: type "atom"
+  register: result
+  change_when: no
+  ignore_errors: true
+
+- name: installing
+  command: snap install --classic atom
+  when: result|failed

@@ -9,7 +9,10 @@
     - java
     - nodejs
     - google_chrome
-    - vscode
+    - vim
+    - tmux
+#    - vscode
+    - atom
     - intellij-idea
     - goland
     - powerline-go
@@ -18,4 +21,3 @@
     - dropbox
     - keepassx
     - other
-
