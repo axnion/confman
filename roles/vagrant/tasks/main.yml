@@ -1,0 +1,5 @@
+# Installing Vagrant
+- name: installing
+  apt:
+    name: vagrant
+    state: present

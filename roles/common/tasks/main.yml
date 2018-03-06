@@ -1,4 +1,3 @@
----
 - name: upgrading software from apt
   apt:
     update_cache: yes

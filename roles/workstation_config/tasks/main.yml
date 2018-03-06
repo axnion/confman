@@ -1,4 +1,5 @@
 # Downloading dotfiles repository and create symlinks
+# TODO: Add to push any new changes to Github before trying to pull
 - name: download dotfile repository
   become: no
   git:

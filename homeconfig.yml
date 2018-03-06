@@ -9,9 +9,12 @@
     - java
     - nodejs
     - google_chrome
+    - virtualbox
+    - docker
+    - vagrant
     - vim
     - tmux
-#    - vscode
+    - vscode
     - atom
     - intellij-idea
     - goland
