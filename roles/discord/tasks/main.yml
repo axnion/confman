@@ -1,0 +1,11 @@
+# Installing Discord using snap
+- name: check if installed
+  become: false
+  shell: type "discord"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing
+  command: snap install discord
+  when: result|failed
