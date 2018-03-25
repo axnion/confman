@@ -1,0 +1,4 @@
+# Installing Docker Compose
+- name: installing compose
+  apt:
+    name: docker-compose
