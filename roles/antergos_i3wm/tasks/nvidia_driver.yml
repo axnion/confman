@@ -1,0 +1,9 @@
+- name: Installing nvidia propriatary drivers installer
+  pacman:
+    name: nvidia-installer
+    state: present
+  register: installer
+
+- name: Run nvidia installer
+  shell: nvidia-installer
+  when: installer.changed

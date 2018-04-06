@@ -1,0 +1,81 @@
+home: /home/{{ ansible_user }}
+
+xorg:
+  - xorg-server
+  - xorg-apps
+  - xorg-xinit
+  - xorg-twm
+  - xterm
+
+i3wm:
+  - i3-wm
+  - i3status
+  - i3blocks
+  - i3lock
+  - dmenu
+
+audio:
+  - pulseaudio
+  - pulseaudio-alsa
+  - pavucontrol
+  - alsa-utils
+  - alsa-plugins
+  - alsa-lib
+  - alsa-firmware
+  - gst-plugins-good
+  - gst-plugins-bad
+  - gst-plugins-base
+  - gst-plugins-ugly
+  - gstreamer
+
+theme:
+  - arc-gtk-theme
+  - sardi-icons
+  - breeze-snow-cursor-theme
+  - surfn-icons-git
+  - noto-fonts
+  - ttf-font-awesome
+
+folders:
+  - "{{ home }}/.icons"
+  - "{{ home }}/.config/gtk-3.0"
+  - "{{ home }}/.config/conky"
+  - "{{ home }}/.config/i3"
+  - "{{ home }}/.config/variety"
+  - "{{ home }}/.config/variety/scripts"
+  - "{{ home }}/.themes"
+  - "{{ home }}/.fonts"
+  - "{{ home }}/Desktop"
+  - "{{ home }}/Dev"
+  - "{{ home }}/Documents"
+  - "{{ home }}/Downloads"
+  - "{{ home }}/Pictures"
+
+misc:
+  - git
+  - curl
+  - dconf-editor
+  - yaourt
+  - conky
+  - gnome-disk-utility
+  - gnome-font-viewer
+  - gnome-screenshot
+  - gnome-system-monitor
+  - gnome-terminal
+  - nemo
+  - notify-osd
+  - numlockx
+  - redshift
+  - thunar
+  - variety
+  - vlc
+  - lxappearance
+  - feh
+  - arandr
+  - qt4
+  - xorg-xrandr
+  - gvfs
+  - compton
+  - volumeicon
+  - xorg-xprop
+  - playerctl

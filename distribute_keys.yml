@@ -2,17 +2,17 @@
 - hosts: localhost
   tasks:
     - name: check if key-pair exists
-      stat: path=~/.ssh/labradoodle
+      stat: path=~/.ssh/homeconfig
       register: key_file
 
     - name: generate SSH key-pair
-      shell: ssh-keygen -b 2048 -t rsa -f ~/.ssh/labradoodle -q -N ""
+      shell: ssh-keygen -b 2048 -t rsa -f ~/.ssh/homeconfig -N ""
       when: key_file.stat.exists == False
 
-- hosts: labradoodle
+- hosts: lab
   gather_facts: False
   tasks:
     - name: distribute public key
       authorized_key: user="{{ ansible_user }}"
-                      key="{{ lookup('file', '~/.ssh/labradoodle.pub') }}"
+                      key="{{ lookup('file', '~/.ssh/homeconfig.pub') }}"
                       state=present

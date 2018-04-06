@@ -1,0 +1,23 @@
+- name: Copying .xinitrc configuration file
+  copy:
+    src: .xinitrc
+    dest: "/home/{{ ansible_user }}/.xinitrc"
+    owner: "{{ ansible_user }}"
+
+- name: Copying .Xresources configuration file
+  copy:
+    src: .Xresources
+    dest: "/home/{{ ansible_user }}/.Xresources"
+    owner: "{{ ansible_user }}"
+
+- name: Create i3 directory
+  file:
+    path: "/home/{{ ansible_user }}/.config/i3"
+    state: directory
+    owner: "{{ ansible_user }}"
+
+- name: Copying i3 configuration file
+  copy:
+    src: i3config
+    dest: "/home/{{ ansible_user }}/.config/i3/config"
+    owner: "{{ ansible_user }}"

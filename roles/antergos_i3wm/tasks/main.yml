@@ -1,0 +1,41 @@
+# Creating all needed folders
+- name: Creating folders
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+  with_items: folders
+
+# Installing xorg and surrounding packages
+- name: Installing xorg packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ xorg }}"
+
+# Installing nvidia installer and running the program
+- include: nvidia_driver.yml
+
+# Installing i3wm and surrounding packages
+- name: Installing i3wm packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ i3wm }}"
+
+# Copying dotfiles to target system
+- include: dotfiles.yml
+
+# Installing audio packages like pulseaudio, pavucontrol, and alsa
+- name: Installing audio packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ audio }}"
+
+# Installing misc packages
+- name: Installing misc packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ misc }}"
