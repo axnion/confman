@@ -71,7 +71,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Defining Workspaces
-set $workspace1 "1"
+set $workspace1 ""
 set $workspace2 "2"
 set $workspace3 "3"
 set $workspace4 "4"
@@ -144,3 +144,8 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+bindsym $mod+shift+x exec i3lock
+
+# Start variety wallpaper thingy
+exec_always variety

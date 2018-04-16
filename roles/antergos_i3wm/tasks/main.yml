@@ -4,7 +4,7 @@
     path: "{{ item }}"
     state: directory
     owner: "{{ ansible_user }}"
-  with_items: folders
+  with_items: "{{ folders }}"
 
 # Installing xorg and surrounding packages
 - name: Installing xorg packages
@@ -23,9 +23,6 @@
     state: present
   with_items: "{{ i3wm }}"
 
-# Copying dotfiles to target system
-- include: dotfiles.yml
-
 # Installing audio packages like pulseaudio, pavucontrol, and alsa
 - name: Installing audio packages
   pacman:
@@ -39,3 +36,6 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ misc }}"
+
+# Copying dotfiles to target system
+- include: config_files.yml

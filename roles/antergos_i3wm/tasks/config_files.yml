@@ -1,12 +1,12 @@
 - name: Copying .xinitrc configuration file
   copy:
-    src: .xinitrc
+    src: xorg/.xinitrc
     dest: "/home/{{ ansible_user }}/.xinitrc"
     owner: "{{ ansible_user }}"
 
 - name: Copying .Xresources configuration file
   copy:
-    src: .Xresources
+    src: xorg/.Xresources
     dest: "/home/{{ ansible_user }}/.Xresources"
     owner: "{{ ansible_user }}"
 
@@ -18,6 +18,12 @@
 
 - name: Copying i3 configuration file
   copy:
-    src: i3config
+    src: i3/config
     dest: "/home/{{ ansible_user }}/.config/i3/config"
+    owner: "{{ ansible_user }}"
+
+- name: Copying variety set_wallpaper script
+  copy:
+    src: variety/set_wallpaper
+    dest: "/home/{{ ansible_user }}/.config/variety/scripts/set_wallpaper"
     owner: "{{ ansible_user }}"

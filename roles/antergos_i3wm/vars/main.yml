@@ -34,14 +34,13 @@ theme:
   - breeze-snow-cursor-theme
   - surfn-icons-git
   - noto-fonts
-  - ttf-font-awesome
+  - ttf-font-awesome-4
 
 folders:
   - "{{ home }}/.icons"
   - "{{ home }}/.config/gtk-3.0"
   - "{{ home }}/.config/conky"
   - "{{ home }}/.config/i3"
-  - "{{ home }}/.config/variety"
   - "{{ home }}/.config/variety/scripts"
   - "{{ home }}/.themes"
   - "{{ home }}/.fonts"
