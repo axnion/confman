@@ -1,41 +1,5 @@
 home: /home/{{ ansible_user }}
 
-xorg:
-  - xorg-server
-  - xorg-apps
-  - xorg-xinit
-  - xorg-twm
-  - xterm
-
-i3wm:
-  - i3-wm
-  - i3status
-  - i3blocks
-  - i3lock
-  - dmenu
-
-audio:
-  - pulseaudio
-  - pulseaudio-alsa
-  - pavucontrol
-  - alsa-utils
-  - alsa-plugins
-  - alsa-lib
-  - alsa-firmware
-  - gst-plugins-good
-  - gst-plugins-bad
-  - gst-plugins-base
-  - gst-plugins-ugly
-  - gstreamer
-
-theme:
-  - arc-gtk-theme
-  - sardi-icons
-  - breeze-snow-cursor-theme
-  - surfn-icons-git
-  - noto-fonts
-  - ttf-font-awesome-4
-
 folders:
   - "{{ home }}/.icons"
   - "{{ home }}/.config/gtk-3.0"
@@ -49,13 +13,54 @@ folders:
   - "{{ home }}/Documents"
   - "{{ home }}/Downloads"
   - "{{ home }}/Pictures"
+  - "/opt/aur"
 
-misc:
+packages:
+  # X org software
+  - xorg-server
+  - xorg-apps
+  - xorg-xinit
+  - xorg-twm
+  - xorg-xrandr
+  - xorg-xprop
+  - xterm
+
+  # i3wm
+  - i3-wm
+  - i3status
+  - i3blocks
+  - i3lock
+  - dmenu
+
+  # Audio software
+  - pulseaudio
+  - pulseaudio-alsa
+  - pavucontrol
+  - alsa-utils
+  - alsa-plugins
+  - alsa-lib
+  - alsa-firmware
+  - gst-plugins-good
+  - gst-plugins-bad
+  - gst-plugins-base
+  - gst-plugins-ugly
+  - gstreamer
+
+  # Theme software
+  - arc-gtk-theme
+  - lxappearance
+  - otf-font-awesome
+  - variety
+  - conky
+  - feh
+  - arandr
+  - qt4
+
+  # Misc
   - git
   - curl
   - dconf-editor
   - yaourt
-  - conky
   - gnome-disk-utility
   - gnome-font-viewer
   - gnome-screenshot
@@ -66,15 +71,19 @@ misc:
   - numlockx
   - redshift
   - thunar
-  - variety
   - vlc
-  - lxappearance
-  - feh
-  - arandr
-  - qt4
-  - xorg-xrandr
   - gvfs
   - compton
   - volumeicon
-  - xorg-xprop
   - playerctl
+
+aur:
+  - clipit
+  - sardi-icons
+  - breeze-snow-cursor-theme
+  - surfn-icons-git
+  - otf-san-francisco
+
+theme:
+  font: System San Francisco Display
+  fontsize: 9

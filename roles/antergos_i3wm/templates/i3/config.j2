@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font for window titles and bar blocks
-font pango:DejaVu Sans Mono 8
+font pango:{{ theme..font }} {{ theme.fontsize }}
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -143,9 +143,13 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        #font pango:DejaVu Sans Mono, Awesome 8
 }
 
 bindsym $mod+shift+x exec i3lock
 
 # Start variety wallpaper thingy
-exec_always variety
+exec variety
+
+# Start clipit for clipboard manager
+# exec --no-startup-id clipit
