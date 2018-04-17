@@ -1,14 +1,15 @@
 - name: Copying .xinitrc configuration file
-  copy:
+  template:
     src: xorg/.xinitrc
     dest: "/home/{{ ansible_user }}/.xinitrc"
     owner: "{{ ansible_user }}"
 
 - name: Copying .Xresources configuration file
-  copy:
+  template:
     src: xorg/.Xresources
     dest: "/home/{{ ansible_user }}/.Xresources"
     owner: "{{ ansible_user }}"
+  register: xresources
 
 - name: Create i3 directory
   file:

@@ -1,4 +1,4 @@
-URxvt.font: xft:monospace:size=16
+URxvt.font: xft:monospace:size={{ theme.fontsize }}
 URxvt.scrollBar: false
 
 urxvt*background: #101010

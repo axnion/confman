@@ -23,7 +23,6 @@ packages:
   - xorg-twm
   - xorg-xrandr
   - xorg-xprop
-  - xterm
 
   # i3wm
   - i3-wm
@@ -62,6 +61,7 @@ packages:
   - curl
   - dconf-editor
   - yaourt
+  - rxvt-unicode
   - gnome-disk-utility
   - gnome-font-viewer
   - gnome-screenshot
