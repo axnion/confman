@@ -55,6 +55,7 @@ packages:
   - feh
   - arandr
   - qt4
+  - rofi
 
   # Misc
   - git

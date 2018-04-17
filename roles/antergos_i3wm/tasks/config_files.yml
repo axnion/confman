@@ -39,3 +39,21 @@
     src: gtk/settings.ini.j2
     dest: "/home/{{ ansible_user }}/.config/gtk-3.0/settings.ini"
     owner: "{{ ansible_user }}"
+
+- name: Create rofi directory
+  file:
+    path: "/home/{{ ansible_user }}/.config/rofi/"
+    state: directory
+    owner: "{{ ansible_user }}"
+
+- name: copying theme for rofi
+  template:
+    src: i3/rofitheme.rasi.j2
+    dest: "/home/{{ ansible_user }}/.config/rofi/rofitheme.rasi"
+    owner: "{{ ansible_user }}"
+
+- name: copying config file for i3blocks
+  template:
+    src: i3/i3blocks.conf.j2
+    dest: "/home/{{ ansible_user }}/.config/i3/i3blocks.conf"
+    owner: "{{ ansible_user }}"
