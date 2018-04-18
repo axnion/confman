@@ -14,10 +14,10 @@ export GOPATH="/home/axnion/Dev/go"
 alias dockerpurge='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
 
 # Powerline-Go
-#function _update_ps1() {
-#		    PS1="$(~/Dev/go/bin/powerline-go -error $?)"
-#}
+function _update_ps1() {
+		    PS1="$(powerline-go -error $?)"
+}
 
-#if [ "$TERM" != "linux" ]; then
-#	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
+if [ "$TERM" != "linux" ]; then
+	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
