@@ -1,3 +1,27 @@
+- name: Copying .bashrc
+  copy:
+    src: .bashrc
+    dest: "/home/{{ ansible_user }}/.bashrc"
+    owner: "{{ ansible_user }}"
+
+- name: Copying .vimrc
+  copy:
+    src: .vimrc
+    dest: "/home/{{ ansible_user }}/.vimrc"
+    owner: "{{ ansible_user }}"
+
+- name: Copying .nanorc
+  copy:
+    src: .nanorc
+    dest: "/home/{{ ansible_user }}/.nanorc"
+    owner: "{{ ansible_user }}"
+
+- name: Copying .tmux.conf
+  copy:
+    src: .tmux.conf
+    dest: "/home/{{ ansible_user }}/.tmux.conf"
+    owner: "{{ ansible_user }}"
+
 - name: Copying .xinitrc configuration file
   template:
     src: xorg/.xinitrc
@@ -39,18 +63,6 @@
   template:
     src: gtk/settings.ini.j2
     dest: "/home/{{ ansible_user }}/.config/gtk-3.0/settings.ini"
-    owner: "{{ ansible_user }}"
-
-- name: Create rofi directory
-  file:
-    path: "/home/{{ ansible_user }}/.config/rofi/"
-    state: directory
-    owner: "{{ ansible_user }}"
-
-- name: copying theme for rofi
-  template:
-    src: i3/rofitheme.rasi.j2
-    dest: "/home/{{ ansible_user }}/.config/rofi/rofitheme.rasi"
     owner: "{{ ansible_user }}"
 
 - name: copying config file for i3blocks

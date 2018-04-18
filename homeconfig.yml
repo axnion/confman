@@ -31,3 +31,4 @@
   become: yes
   roles:
     - antergos_i3wm
+    - antergos_workstation

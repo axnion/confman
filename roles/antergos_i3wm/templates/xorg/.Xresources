@@ -20,3 +20,24 @@ urxvt*color12: #5f5fee
 urxvt*color13: #bb88dd
 urxvt*color14: #4eb4fa
 urxvt*color15: #d0d0d0
+
+rofi.color-enabled: true
+rofi.show-icons: true
+!                  bg             border    separator
+rofi.color-window: argb:cc252936, #9575cd,  argb:ffffffff
+!                  bg             fg       bg-alt         hl-bg          hl-fg
+rofi.color-normal: argb:00252936, #ffffff, argb:00252936, argb:009575cd, #ff9575cd
+rofi.color-active: argb:00252936, #252936, argb:00252936, argb:009575cd, #ffc000
+rofi.color-urgent: argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000
+
+rofi.width: 100
+rofi.padding: 400
+rofi.line-margin: 15
+rofi.lines: 3
+rofi.separator-style: none
+rofi.columns: 1
+rofi.font: Inconsolata Bold 22
+rofi.bw: 0
+rofi.eh: 2
+rofi.hide-scrollbar: true
+rofi.auto-select: true

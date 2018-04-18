@@ -183,5 +183,7 @@ exec variety
 exec compton -f
 
 # Run Rafi the dmenu alternative
-# bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
-bindsym $mod+d exec rofi -show run -eh 2 -padding 800 -theme rofitheme -fullscreen
+bindsym $mod+d exec rofi -show drun
+
+# Load .Xresources to apply urxvt and rofi config
+exec xrdb -merge ~/.Xresources
