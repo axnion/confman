@@ -30,6 +30,6 @@
 - hosts: lab
   become: yes
   roles:
-    - antergos_core
+#    - antergos_core
     - antergos_i3wm
-    - antergos_workstation
+#    - antergos_workstation

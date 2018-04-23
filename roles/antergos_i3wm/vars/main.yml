@@ -5,7 +5,7 @@ folders:
   - "{{ home }}/.config/gtk-3.0"
   - "{{ home }}/.config/conky"
   - "{{ home }}/.config/i3"
-  - "{{ home }}/.config/variety/scripts"
+  - "{{ home }}/.config/dunst"
   - "{{ home }}/.themes"
   - "{{ home }}/.fonts"
   - "{{ home }}/Desktop"
@@ -27,9 +27,8 @@ packages:
   # i3wm
   - i3-wm
   - i3status
-  - i3blocks
+  #- i3blocks
   - i3lock
-  - dmenu
 
   # Audio software
   - pulseaudio
@@ -77,6 +76,7 @@ packages:
   - compton
   - volumeicon
   - playerctl
+  - dunst
 
 aur:
   - clipit
@@ -84,7 +84,4 @@ aur:
   - breeze-snow-cursor-theme
   - surfn-icons-git
   - otf-san-francisco
-
-theme:
-  font: System San Francisco Display
-  fontsize: 9
+  - polybar

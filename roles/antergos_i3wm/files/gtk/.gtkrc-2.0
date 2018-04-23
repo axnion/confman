@@ -3,7 +3,7 @@
 include "/home/axnion/.gtkrc-2.0.mine"
 gtk-theme-name="Arc-Dark"
 gtk-icon-theme-name="Surfn-Arc"
-gtk-font-name="{{ theme.font }} {{ theme.fontsize }}"
+gtk-font-name="System San Francisco Display 9"
 gtk-cursor-theme-name="Breeze_Snow"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH

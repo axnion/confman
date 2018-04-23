@@ -1,8 +1,11 @@
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
+
 # Set mod key to Windows key
 set $mod Mod4
 
 # Font for window titles and bar blocks
-font pango:{{ theme.font }} {{ theme.fontsize }}
+font pango:System San Francisco 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -72,10 +75,10 @@ bindsym $mod+a focus parent
 
 # Defining Workspaces
 set $workspace1 ""
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
+set $workspace2 ""
+set $workspace3 ""
+set $workspace4 ""
+set $workspace5 ""
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
@@ -156,31 +159,21 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Hide side vertical and horizontal indicators
 hide_edge_borders both
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
-        colors {
-          background $bg-color
-          separator #757575
-          #                  border             background         text
-          focused_workspace  $bg-color          $bg-color          $text-color
-          inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-          urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        }
-}
-
+# lockscreen
 bindsym $mod+shift+x exec i3lock
 
+# Start polybar
+exec_always --no-startup-id ~/.config/polybar/polybar.sh
+
 # Start variety wallpaper thingy
-exec variety
+# exec variety
+exec_always --no-startup-id feh --bg-scale  ~/Pictures/wallpaper.jpg
 
 # Start clipit for clipboard manager
 # exec --no-startup-id clipit
 
 # Start compton compositor
-exec compton -f
+exec --no-startup-id compton -b -f --vsync=drm --backend=glx
 
 # Run Rafi the dmenu alternative
 bindsym $mod+d exec rofi -show drun

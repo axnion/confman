@@ -23,50 +23,57 @@
     owner: "{{ ansible_user }}"
 
 - name: Copying .xinitrc configuration file
-  template:
+  copy:
     src: xorg/.xinitrc
     dest: "/home/{{ ansible_user }}/.xinitrc"
     owner: "{{ ansible_user }}"
 
 - name: Copying .Xresources configuration file
-  template:
+  copy:
     src: xorg/.Xresources
     dest: "/home/{{ ansible_user }}/.Xresources"
     owner: "{{ ansible_user }}"
   register: xresources
 
-- name: Create i3 directory
-  file:
-    path: "/home/{{ ansible_user }}/.config/i3"
-    state: directory
-    owner: "{{ ansible_user }}"
-
 - name: Copying i3 configuration file
-  template:
-    src: i3/config.j2
+  copy:
+    src: i3/config
     dest: "/home/{{ ansible_user }}/.config/i3/config"
     owner: "{{ ansible_user }}"
 
-- name: Copying variety set_wallpaper script
-  copy:
-    src: variety/set_wallpaper
-    dest: "/home/{{ ansible_user }}/.config/variety/scripts/set_wallpaper"
-    owner: "{{ ansible_user }}"
-
 - name: Copying .gtkrc-2.0 config file
-  template:
-    src: gtk/.gtkrc-2.0.j2
+  copy:
+    src: gtk/.gtkrc-2.0
     dest: "/home/{{ ansible_user }}/.gtkrc-2.0"
     owner: "{{ ansible_user }}"
 
 - name: Copying gtk-3.0 config file
-  template:
-    src: gtk/settings.ini.j2
+  copy:
+    src: gtk/settings.ini
     dest: "/home/{{ ansible_user }}/.config/gtk-3.0/settings.ini"
     owner: "{{ ansible_user }}"
 
-- name: copying config file for i3blocks
-  template:
-    src: i3/i3blocks.conf.j2
-    dest: "/home/{{ ansible_user }}/.config/i3/i3blocks.conf"
+- name: Copying .polybar config
+  copy:
+    src: polybar/config
+    dest: "/home/{{ ansible_user }}/.config/polybar/config"
+    owner: "{{ ansible_user }}"
+
+- name: Copying polybar launch script
+  copy:
+    src: polybar/polybar.sh
+    dest: "/home/{{ ansible_user }}/.config/polybar/polybar.sh"
+    owner: "{{ ansible_user }}"
+    mode: 0744
+
+- name: Copying wallpaper
+  copy:
+    src: wallpaper.jpg
+    dest: "/home/{{ ansible_user }}/Pictures/wallpaper.jpg"
+    owner: "{{ ansible_user }}"
+
+- name: Copying dunstrc
+  copy:
+    src: dunst/dunstrc
+    dest: "/home/{{ ansible_user }}/.config/dunst/dunstrc"
     owner: "{{ ansible_user }}"
