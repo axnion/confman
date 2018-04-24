@@ -4,14 +4,21 @@ margin-bottom = 5
 
 [bar/topbar]
 width = 100%
-height = 20
+height = 25
 offset-x = 0
 offset-y = 0
-padding-right = 7
-padding-left = 7
 
-background = #383c4a
-foreground = #ffffff
+background = #89000000
+foreground = #eee
+
+underline-size = 2
+underline-color: #eee
+
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
 
 font-0 = System San Francisco:size=10
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;1"
@@ -20,7 +27,7 @@ font-3 = "Font Awesome 5 Brands:pixelsize=12;1"
 
 modules-left = date title
 modules-center = i3
-modules-right = volume
+modules-right = volume powermenu
 
 override-redirect = false
 wm-restack = i3
@@ -32,26 +39,40 @@ scroll-down = i3wm-wsprev
 
 [module/i3]
 type = internal/i3
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = true
-strip-wsnumbers = true
 pin-workspaces = true
 
 label-mode-padding = 5
 
-label-unfocused-foreground = #666666
-label-unfocused-padding = 2
-label-visible-foregroud = #c700ff
-label-visible-padding = 2
-label-focused-foreground = #ffffff
-label-focused-padding = 2
-label-urgent-foreground = #ff9d00
-label-urgent-padding = 2
+label-focused = %icon%
+label-focused-background = #88000000
+label-focused-underline= #ddd
+label-focused-padding = 4
+
+label-unfocused = %icon%
+label-unfocused-foreground = #44ffffff
+label-unfocused-padding = 4
+
+label-visible= %icon%
+label-visible-padding = 4
+
+label-urgent= %icon%
+label-urgent-foreground = #ff8300
+label-urgent-padding = 4
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1.0
 
 date = "%d/%m/%y"
 date-alt = " %d"
@@ -60,6 +81,9 @@ time = " %H:%M"
 time-alt =  %H:%M
 
 label = %date% %time%
+format =    <label>
+format-background = #88000000
+format-padding = 3
 
 [module/volume]
 type = internal/volume
@@ -89,5 +113,31 @@ format-disconnected = <label-disconnected>
 format-packetloss = <animation-packetloss> <label-connected>
 
 label-connected = %essid% %downspeed:9%
-
 label-disconnected = not connected
+
+[module/powermenu]
+type = custom/menu
+
+label-open = 
+;label-open-background = #dd0000
+;label-open-foreground = #fff
+label-close = cancel
+;label-close-background = #dd0000
+;label-close-foreground = #fff
+label-open-padding = 4
+label-close-padding = 3
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-0-padding = 3
+menu-0-1-padding = 3
+
+menu-1-0 = reboot?
+menu-1-0-exec = sudo reboot
+menu-1-0-padding = 3
+
+menu-2-0 = power off?
+menu-2-0-exec = sudo poweroff
+menu-2-0-padding = 3

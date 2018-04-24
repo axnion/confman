@@ -68,8 +68,8 @@
 
 - name: Copying wallpaper
   copy:
-    src: wallpaper.jpg
-    dest: "/home/{{ ansible_user }}/Pictures/wallpaper.jpg"
+    src: wallpaper.png
+    dest: "/home/{{ ansible_user }}/Pictures/wallpaper.png"
     owner: "{{ ansible_user }}"
 
 - name: Copying dunstrc

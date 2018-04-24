@@ -77,11 +77,11 @@ gaps inner 15
 gaps outer 10
 
 # Defining Workspaces
-set $workspace1 ""
-set $workspace2 ""
-set $workspace3 ""
-set $workspace4 ""
-set $workspace5 ""
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
@@ -170,13 +170,13 @@ exec_always --no-startup-id ~/.config/polybar/polybar.sh
 
 # Start variety wallpaper thingy
 # exec variety
-exec_always --no-startup-id feh --bg-scale  ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale  ~/Pictures/wallpaper.png
 
 # Start clipit for clipboard manager
 # exec --no-startup-id clipit
 
 # Start compton compositor
-exec --no-startup-id compton -b -f --vsync=drm --backend=glx
+exec --no-startup-id compton -b -f -m --vsync=drm --backend=glx
 
 # Run Rafi the dmenu alternative
 bindsym $mod+d exec rofi -show drun
