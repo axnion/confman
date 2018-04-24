@@ -25,10 +25,11 @@ packages:
   - xorg-xprop
 
   # i3wm
-  - i3-wm
+  # - i3-wm
   - i3status
   #- i3blocks
   - i3lock
+  - i3-gaps
 
   # Audio software
   - pulseaudio
