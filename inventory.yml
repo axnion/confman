@@ -12,7 +12,7 @@ all:
           3062
     lab:
       ansible_connection: ssh
-      ansible_host: 192.168.1.153
+      ansible_host: 192.168.1.154
       ansible_user: axnion
       ansible_sudo_pass: !vault |
           $ANSIBLE_VAULT;1.1;AES256
