@@ -20,5 +20,7 @@
         "accentPrevious": "Blue"
     },
 
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+
+	"editor.fontSize": 16
 }
