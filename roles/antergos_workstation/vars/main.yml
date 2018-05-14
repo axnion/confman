@@ -4,21 +4,22 @@ arch:
   - docker-compose
   - duplicity
   - go
-  - powerline-fonts
   - tmux
   - vim
   - virtualbox
   - xclip
+  - keepass
+  - keepass-plugin-keeagent
 
 aur:
   - discord
   - dropbox
   - jetbrains-toolbox
   - jdk
-  - keepassx2
   - mailspring
   - nodejs
   - powerline-go-bin
   - slack-desktop
   - spotify
   - vagrant
+  - google-chrome
