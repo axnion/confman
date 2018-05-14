@@ -76,6 +76,11 @@ bindsym $mod+a focus parent
 gaps inner 15
 gaps outer 10
 
+# Defining displays
+set $monitor1 "DP-4.8"
+set $monitor2 "HDMI-0"
+set $monitor3 "DP-1"
+
 # Defining Workspaces
 set $workspace1 "1"
 set $workspace2 "2"
@@ -111,6 +116,36 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# Bind workspaces to monitors
+workspace $workspace1 output $monitor2
+workspace $workspace2 output $monitor2
+workspace $workspace3 output $monitor1
+workspace $workspace4 output $monitor1
+workspace $workspace5 output $monitor1
+workspace $workspace6 output $monitor1
+workspace $workspace7 output $monitor1
+workspace $workspace8 output $monitor1
+workspace $workspace9 output $monitor3
+workspace $workspace10 output $monitor3
+
+# Bind program to workspace
+assign [class="Google-chrome"] $workspace3
+assign [class="Slack"] $workspace1
+assign [class="TelegramDesktop"] $workspace1
+assign [class="Code"] $workspace4
+assign [class="KeePass2"] $workspace9
+assign [class="Spotify"] $workspace10
+for_window [class="Spotify"] move to workspace $workspace10 # Special treatment because of bug
+
+# Start desktop programs
+exec google-chrome-stable
+exec spotify
+exec slack
+exec code
+exec dropbox
+exec telegram-desktop
+exec google-chrome
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -162,6 +197,16 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Hide side vertical and horizontal indicators
 hide_edge_borders both
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 2%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 2%-
+bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # lockscreen
 bindsym $mod+shift+x exec i3lock
 
@@ -183,3 +228,5 @@ bindsym $mod+d exec rofi -show drun
 
 # Load .Xresources to apply urxvt and rofi config
 exec xrdb -merge ~/.Xresources
+
+exec_always xrandr --output DP-4.8 --mode 2560x1440 --pos 2560x0 --rotate normal --output DP-3 --off --output DP-2 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DVI-I-1 --off --output DVI-I-0 --off --output DP-1 --mode 1920x1080 --pos 5120x136 --rotate normal --output DP-0 --off

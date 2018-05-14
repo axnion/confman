@@ -1,8 +1,6 @@
-#URxvt.font: xft:monospace:size={{ theme.fontsize }},xft:Terminess Powerline:size:12\ for\ Powerline
-#URxvt.font: xft:Terminess Powerline:size=12
-#urxvt*font: xft:Terminus:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12
-URxvt*font:  xft:inconsolata:size=10:antialias=true,xft:DejaVu Sans:size=10:antialias=true,xft:Sauce Code Powerline:antialias=true:hinting=true:size=9
-URxvt.scrollBar: false
+URxvt.font: xft:Monaco for Powerline:pixelsize=15
+
+urxvt.scrollBar: false
 
 urxvt*background: #101010
 urxvt*foreground: #d0d0d0
@@ -23,6 +21,14 @@ urxvt*color12: #5f5fee
 urxvt*color13: #bb88dd
 urxvt*color14: #4eb4fa
 urxvt*color15: #d0d0d0
+
+Xft.dpi: 115
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
 rofi.color-enabled: true
 rofi.show-icons: true
