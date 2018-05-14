@@ -1,33 +1,4 @@
----
-#- hosts: workstation
-#  become: yes
-#  roles:
-#    - common
-#    - graphics_drivers
-#    - workstation_config
-#    - golang
-#    - java
-#    - nodejs
-#    - google_chrome
-#    - virtualbox
-#    - docker
-#    - vagrant
-#    - vim
-#    - tmux
-#    - vscode
-#    - atom
-#    - intellij-idea
-#    - goland
-#    - powerline-go
-#    - spotify
-#    - slack
-#    - dropbox
-#    - keepassx
-#    - mailspring
-#    - discord
-#    - other
-
-- hosts: lab
+- hosts: workstation
   become: yes
   roles:
     - antergos_core

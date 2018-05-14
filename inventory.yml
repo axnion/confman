@@ -3,6 +3,7 @@ all:
   hosts:
     workstation:
       ansible_connection: local
+      ansible_user: axnion
       ansible_sudo_pass: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           34333364373334336130313637343432653762653439396533626236313236363035613030386436
