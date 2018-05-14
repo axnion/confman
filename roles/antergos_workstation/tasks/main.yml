@@ -3,6 +3,7 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ arch }}"
+  ignore_errors: yes
 
 - name: Installing AUR packages
   aur:
@@ -10,3 +11,6 @@
     dir: /opt/aur
     user: "{{ ansible_user }}"
   with_items: "{{ aur }}"
+  ignore_errors: yes
+
+- include: ./vscode.yml
