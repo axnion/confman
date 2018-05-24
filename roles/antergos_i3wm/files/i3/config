@@ -130,10 +130,10 @@ workspace $workspace9 output $monitor3
 workspace $workspace10 output $monitor3
 
 # Bind program to workspace
-assign [class="Google-chrome"] $workspace3
+assign [class="Google-chrome"] $workspace4
 assign [class="Slack"] $workspace1
 assign [class="TelegramDesktop"] $workspace1
-assign [class="Code"] $workspace4
+assign [class="Code"] $workspace3
 assign [class="KeePass2"] $workspace9
 assign [class="Spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10 # Special treatment because of bug

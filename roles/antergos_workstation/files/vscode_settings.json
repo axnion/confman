@@ -22,5 +22,12 @@
 
     "vim.useSystemClipboard": true,
 
-	"editor.fontSize": 16
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+
+    "emmet.useNewEmmet": true,
+    "emmet.showExpandedAbbreviation": "always",
+    "emmet.syntaxProfiles": {
+        "javascript": "javascriptreawct"
+    }
 }

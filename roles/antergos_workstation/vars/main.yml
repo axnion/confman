@@ -25,6 +25,7 @@ aur:
   - vagrant
   - google-chrome
   - visual-studio-code-bin
+  - postman-bin
 
 vscode_extension:
   - vscodevim.vim
