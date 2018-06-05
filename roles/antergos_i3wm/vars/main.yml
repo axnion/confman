@@ -58,15 +58,9 @@ packages:
   # Misc
   - git
   - curl
-  - dconf-editor
   - yaourt
   - rxvt-unicode
-  - gnome-disk-utility
-  - gnome-font-viewer
-  - gnome-screenshot
-  - gnome-system-monitor
-  - gnome-terminal
-  - nemo
+  - gnome-keyring
   - notify-osd
   - numlockx
   - redshift

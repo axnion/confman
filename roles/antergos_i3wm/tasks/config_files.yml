@@ -77,3 +77,4 @@
     src: dunst/dunstrc
     dest: "/home/{{ ansible_user }}/.config/dunst/dunstrc"
     owner: "{{ ansible_user }}"
+

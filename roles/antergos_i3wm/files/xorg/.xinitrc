@@ -1,1 +1,4 @@
-exec i3
+dbus-launch --exit-with-session i3
+
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
