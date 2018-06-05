@@ -16,6 +16,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # Kill focused window
 bindsym $mod+Shift+q kill
 
+# Disable mouse jumping to center of focused screen
+mouse_warping none
+
 # Start dmenu (a program launcher)
 # alternative: i3-dmenu-desktop for only application with .desktop file
 # bindsym $mod+d exec dmenu_run
@@ -25,12 +28,6 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# Alternative, change focus with vim keys
-# bindsym $mod+j focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
-# bindsym $mod+semicolon focus right
 
 # Focus window only when clicked
 focus_follows_mouse no
@@ -72,9 +69,6 @@ bindsym $mod+a focus parent
 
 # Focus the child container
 #bindsym $mod+d focus child
-
-gaps inner 15
-gaps outer 10
 
 # Defining displays
 set $monitor1 "DP-4.8"
@@ -130,7 +124,7 @@ workspace $workspace9 output $monitor3
 workspace $workspace10 output $monitor3
 
 # Bind program to workspace
-assign [class="Google-chrome"] $workspace4
+assign [class="Google-chrome"] $workspace5
 assign [class="Slack"] $workspace1
 assign [class="TelegramDesktop"] $workspace1
 assign [class="Code"] $workspace3
@@ -213,15 +207,14 @@ bindsym $mod+shift+x exec i3lock
 # Start polybar
 exec_always --no-startup-id ~/.config/polybar/polybar.sh
 
-# Start variety wallpaper thingy
-# exec variety
+# Set wallpaper using feh
 exec_always --no-startup-id feh --bg-scale  ~/Pictures/wallpaper.png
 
 # Start clipit for clipboard manager
 # exec --no-startup-id clipit
 
 # Start compton compositor
-exec --no-startup-id compton -b -f -m --vsync=drm --backend=glx
+exec --no-startup-id compton -b -f --vsync=drm --backend=glx
 
 # Run Rafi the dmenu alternative
 bindsym $mod+d exec rofi -show drun

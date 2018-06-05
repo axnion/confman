@@ -4,6 +4,7 @@ arch:
   - docker-compose
   - duplicity
   - go
+  - telegram-desktop
   - tmux
   - vim
   - virtualbox

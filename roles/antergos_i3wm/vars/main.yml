@@ -28,7 +28,7 @@ packages:
   # i3wm
   - i3status
   - i3lock
-  - i3-gaps
+  - i3-wm
 
   # Audio software
   - pulseaudio
