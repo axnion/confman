@@ -1,0 +1,13 @@
+extensions:
+  - vscodevim.vim
+  - Equinusocio.vsc-material-theme
+  - ms-vscode.Go
+  - eamodio.gitlens
+  - dbaeumer.vscode-eslint
+  - PeterJausovec.vscode-docker
+  - eg2.vscode-npm-script
+  - christian-kohler.npm-intellisense
+  - DavidAnson.vscode-markdownlint
+  - redhat.java
+  - PKief.material-icon-theme
+  - HookyQR.beautify

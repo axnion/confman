@@ -4,3 +4,10 @@
     - antergos_core
     - antergos_i3wm
     - antergos_workstation
+
+- hosts: workstation
+  become: no
+  roles:
+    - config_base
+    - config_i3
+    - config_vscode

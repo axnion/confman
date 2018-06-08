@@ -12,5 +12,3 @@
     user: "{{ ansible_user }}"
   with_items: "{{ aur }}"
   ignore_errors: yes
-
-- include: ./vscode.yml

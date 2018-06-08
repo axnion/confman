@@ -1,0 +1,10 @@
+- name: Installing extensions
+  command: code --install-extension {{ item }}
+  with_items: "{{ vscode_extension }}"
+
+- name: Applying settings.json
+  file:
+    src: ~/dotfiles/vscode/settings.json
+    dest: ~/.config/Code/User/settings.json
+    force: yes
+    state: link

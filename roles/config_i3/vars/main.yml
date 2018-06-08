@@ -1,0 +1,4 @@
+dirs:
+  - ~/.config/i3/scripts
+  - ~/.config/gtk-3.0
+  - ~/.ssh

@@ -1,0 +1,25 @@
+- name: Cloning dotfiles repository
+  git:
+    repo: 'git@github.com:axnion/dotfiles.git'
+    dest: ~/dotfiles
+
+- name: Applying .bashrc
+  file:
+    src: ~/dotfiles/bashrc
+    dest: ~/.bashrc
+    force: yes
+    state: link
+
+- name: Applying .vimrc
+  file:
+    src: ~/dotfiles/vimrc
+    dest: ~/.vimrc
+    force: yes
+    state: link
+
+- name: Applying .nanorc
+  file:
+    src: ~/dotfiles/nanorc
+    dest: ~/.nanorc
+    force: yes
+    state: link

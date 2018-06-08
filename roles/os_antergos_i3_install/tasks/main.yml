@@ -14,7 +14,15 @@
   with_items: "{{ packages }}"
 
 # Installing nvidia installer and running the program
-- include: nvidia_driver.yml
+- name: Installing nvidia propriatary drivers installer
+  pacman:
+    name: nvidia-installer
+    state: present
+  register: installer
+
+- name: Run nvidia installer
+  shell: nvidia-installer
+  when: installer.changed
 
 # Installing AUR packages
 - name: Installing AUR packages
@@ -25,4 +33,4 @@
   with_items: "{{ aur }}"
 
 # Copying dotfiles to target system
-- include: config_files.yml
+- include: config.yml
