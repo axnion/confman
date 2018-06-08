@@ -4,57 +4,10 @@
     state: directory
   with_items: "{{ dirs }}"
 
-# XORG FILES ------------------------------------
-- name: Apply .xinitrc
+- name: Create symlinks from dotfiles repository
   file:
-    src: ~/dotfiles/xorg/xinitrc
-    dest: ~/.xinitrc
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     force: yes
     state: link
-
-- name: Apply .Xresources
-  file:
-    src: ~/dotfiles/xorg/Xresources
-    dest: ~/.Xresources
-    force: yes
-    state: link
-
-# GTK CONFIG -----------------------------------
-- name: Apply .gtkrc-2.0
-  file:
-    src: ~/dotfiles/gtk/gtkrc-2.0
-    dest: ~/.gtkrc-2.0
-    force: yes
-    state: link
-
-- name: Apply settings.ini (GTK 3)
-  file:
-    src: ~/dotfiles/gtk/settings.ini
-    dest: ~/.config/gtk-3.0/settings.ini
-    force: yes
-    state: link
-
-# i3wm -------------------------------------------
-- name: Apply i3 config
-  file:
-    src: ~/dotfiles/i3/config
-    dest: ~/.config/i3/config
-    force: yes
-    state: link
-
-- name: Apply gnome-keyring start script
-  file:
-    src: ~/dotfiles/i3/scripts/gnome-keyring.sh
-    dest: ~/.config/i3/scripts/gnome-keyring.sh
-    force: yes
-    state: link
-
-# SSH -------------------------------------------
-- name: Apply SSH configuration
-  file:
-    src: ~/dotfiles/ssh/config
-    dest: ~/.ssh/config
-    force: yes
-    state: link
-
-
+  with_items: "{{ links }}"

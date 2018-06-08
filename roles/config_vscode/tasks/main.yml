@@ -1,6 +1,6 @@
 - name: Installing extensions
   command: code --install-extension {{ item }}
-  with_items: "{{ vscode_extension }}"
+  with_items: "{{ extensions }}"
 
 - name: Applying settings.json
   file:

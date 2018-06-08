@@ -1,11 +1,3 @@
-# Creating all needed folders
-- name: Creating folders
-  file:
-    path: "{{ item }}"
-    state: directory
-    owner: "{{ ansible_user }}"
-  with_items: "{{ folders }}"
-
 # Installing xorg and surrounding packages
 - name: Installing packages
   pacman:
@@ -31,6 +23,3 @@
     dir: /opt/aur
     user: "{{ ansible_user }}"
   with_items: "{{ aur }}"
-
-# Copying dotfiles to target system
-- include: config.yml

@@ -1,4 +1,25 @@
 dirs:
   - ~/.config/i3/scripts
   - ~/.config/gtk-3.0
+  - ~/.config/gtk-3.0
+  - ~/.config/conk
+  - ~/.config/i3
+  - ~/.config/dunst
   - ~/.ssh
+  - ~/Desktop
+  - ~/Dev
+  - ~/Documents
+  - ~/Downloads
+  - ~/Pictures
+
+links:
+  - { src: '~/dotfiles/xorg/xinitrc', dest: '~/.xinitrc' }
+  - { src: '~/dotfiles/xorg/Xresources', dest: '~/.Xresources' }
+  - { src: '~/dotfiles/gtk/gtkrc-2.0', dest: '~/.gtkrc-2.0' }
+  - { src: '~/dotfiles/gtk/settings.ini', dest: '~/.config/gtk-3.0/settings.ini' }
+  - { src: '~/dotfiles/i3/config', dest: '~/.config/i3/config' }
+  - { src: '~/dotfiles/i3/scripts/gnome-keyring.sh', dest: '~/.config/i3/scripts/gnome-keyring.sh' }
+  - { src: '~/dotfiles/ssh/config', dest: '~/.ssh/config' }
+  - { src: '~/dotfiles/polybar/config', dest: '~/.config/polybar/config' }
+  - { src: '~/dotfiles/polybar/polybay.sh', dest: '~/.config/polybar/polybar.sh' }
+  - { src: '~/dotfiles/dunst/dunstrc', dest: '~/.config/dunst/dunstrc' }

@@ -1,10 +1,12 @@
+# Install workstation software
 - hosts: workstation
   become: yes
   roles:
-    - antergos_core
-    - antergos_i3wm
-    - antergos_workstation
+    - install_base-antergos
+    - install_i3-antergos
+    - install_workstation-antergos
 
+# Configure workstation software
 - hosts: workstation
   become: no
   roles:

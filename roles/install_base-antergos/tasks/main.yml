@@ -1,0 +1,10 @@
+- name: Updating system
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Installing packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages }}"
