@@ -21,5 +21,5 @@ links:
   - { src: '~/dotfiles/i3/scripts/gnome-keyring.sh', dest: '~/.config/i3/scripts/gnome-keyring.sh' }
   - { src: '~/dotfiles/ssh/config', dest: '~/.ssh/config' }
   - { src: '~/dotfiles/polybar/config', dest: '~/.config/polybar/config' }
-  - { src: '~/dotfiles/polybar/polybay.sh', dest: '~/.config/polybar/polybar.sh' }
+  - { src: '~/dotfiles/polybar/polybar.sh', dest: '~/.config/polybar/polybar.sh' }
   - { src: '~/dotfiles/dunst/dunstrc', dest: '~/.config/dunst/dunstrc' }
