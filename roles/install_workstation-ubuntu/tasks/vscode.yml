@@ -10,7 +10,3 @@
   command: snap install --classic vscode
   when: result|failed
 
-- name: installing extensions
-  become: no
-  command: code --install-extension {{ item }}
-  with_items: "{{ extensions }}"

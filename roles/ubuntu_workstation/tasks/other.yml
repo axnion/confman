@@ -1,6 +1,0 @@
-# Installing xclip
-# Use xclip -sel clip < ~/.ssh/id_rsa.pub because I forget. :P
-
-- name: installing xclip
-  apt:
-    name: xclip

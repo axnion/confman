@@ -7,3 +7,8 @@
   apt:
     name: git
     state: present
+
+# Usage: xclip -sel clip < ~/.ssh/id_rsa.pub because I forget. :P
+- name: installing xclip
+  apt:
+    name: xclip

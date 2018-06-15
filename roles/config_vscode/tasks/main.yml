@@ -1,8 +1,10 @@
 - name: Installing extensions
+  become: no
   command: code --install-extension {{ item }}
   with_items: "{{ extensions }}"
 
 - name: Applying settings.json
+  become: no
   file:
     src: ~/dotfiles/vscode/settings.json
     dest: ~/.config/Code/User/settings.json

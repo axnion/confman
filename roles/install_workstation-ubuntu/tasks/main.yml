@@ -1,0 +1,29 @@
+# Base
+- include: common.yml
+- include: nvidia-driver.yml
+
+# Platforms
+- include: zsh.yml
+- include: golang.yml
+- include: java.yml
+- include: nodejs.yml
+- include: docker.yml
+- include: docker-compose.yml
+
+# Dev Tools
+- include: goland.yml
+- include: intellij.yml
+- include: virtualbox.yml
+- include: vscode.yml
+- include: vagrant.yml
+- include: vim.yml
+
+# Applications
+- include: discord.yml
+- include: dropbox.yml
+- include: google-chrome.yml
+- include: keepassx.yml
+- include: mailspring.yml
+- include: slack.yml
+- include: spotify.yml
+

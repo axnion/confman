@@ -2,14 +2,6 @@
 - hosts: workstation
   become: yes
   roles:
-    - install_base-antergos
-    - install_i3-antergos
-    - install_workstation-antergos
-
-# Configure workstation software
-- hosts: workstation
-  become: no
-  roles:
+    - install_workstation-ubuntu
     - config_base
-    - config_i3
     - config_vscode
