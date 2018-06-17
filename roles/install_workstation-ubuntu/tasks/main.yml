@@ -26,4 +26,5 @@
 - include: mailspring.yml
 - include: slack.yml
 - include: spotify.yml
+- include: telegram.yml
 

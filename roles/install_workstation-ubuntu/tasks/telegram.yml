@@ -1,0 +1,11 @@
+# Installing Jetbrains Intellij Idea Ultimate Edition using Snap
+- name: checking if telegram-desktop is installed
+  become: false
+  shell: type "telegram-desktop"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: intalling telegram-desktop from snap
+  command: snap install --classic telegram-desktop
+  when: result|failed
