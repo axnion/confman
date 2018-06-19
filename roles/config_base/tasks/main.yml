@@ -12,6 +12,14 @@
     force: yes
     state: link
 
+- name: Applying .zshrc
+  become: no
+  file:
+    src: ~/dotfiles/zshrc
+    dest: ~/.zshrc
+    force: yes
+    state: link
+
 - name: Applying .vimrc
   become: no
   file:
