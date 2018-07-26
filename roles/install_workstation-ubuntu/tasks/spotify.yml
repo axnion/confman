@@ -1,11 +1,11 @@
 # Installing Spotify using snap
-- name: check if installed
+- name: checking if Spotify is installed
   become: false
   shell: type "spotify"
   register: result
   changed_when: no
   ignore_errors: true
 
-- name: installing
+- name: installing Spotify
   command: snap install spotify
-  when: result|failed
+  when: result is failed

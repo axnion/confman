@@ -19,17 +19,17 @@
     name: software-properties-common
     state: present
 
-- name: adding key
+- name: adding GPG-key for Docker 
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
 
-- name: adding apt repository
+- name: adding apt repository for Docker
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable
     state: present
 
-- name: installing docker
+- name: installing Docker
   apt:
     name: docker-ce
     state: present

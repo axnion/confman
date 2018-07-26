@@ -1,11 +1,11 @@
 # Installing Mailspring mail client
-- name: checking mailspring installed
+- name: checking if Mailspring is installed
   become: false
   shell: type "mailspring"
   register: result
   changed_when: no
   ignore_errors: true
 
-- name: installing
+- name: installing Mailspring
   command: snap install mailspring
   when: result|failed

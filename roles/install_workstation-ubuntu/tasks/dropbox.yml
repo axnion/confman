@@ -1,4 +1,4 @@
 # Installing dropbox
-- name: installing
+- name: installing Dropbox
   apt:
     name: nautilus-dropbox

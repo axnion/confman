@@ -1,4 +1,4 @@
-- name: upgrading software from apt
+- name: updating software and cached repository list from apt
   apt:
     update_cache: yes
     upgrade: yes

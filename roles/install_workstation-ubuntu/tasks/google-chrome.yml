@@ -1,17 +1,17 @@
 # Installs Google Chrome stable
 # Based on this post: https://askubuntu.com/questions/510056/how-to-install-google-chrome
 
-- name: adding key
+- name: adding GPG-key for Google Chrome
   apt_key:
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
     state: present
 
-- name: adding apt repository
+- name: adding apt repository for Google Chrome
   apt_repository:
     repo: deb http://dl.google.com/linux/chrome/deb/ stable main
     state: present
 
-- name: installing
+- name: installing Google Chrome Stable
   apt:
     update_cache: yes
     name: google-chrome-stable

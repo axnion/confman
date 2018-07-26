@@ -1,11 +1,11 @@
 # Installing drivers for graphics card
 
-- name: adding repository
+- name: adding Nvidia Graphics Drivers repository
   apt_repository:
     repo: ppa:graphics-drivers/ppa
     state: present
 
-- name: installing drivers
+- name: installing Nvidia Graphics Drivers
   apt:
     name: nvidia-387
     update_cache: yes

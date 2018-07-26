@@ -1,5 +1,6 @@
 # Base
 - include: common.yml
+- include: google-chrome.yml
 - include: nvidia-driver.yml
 
 # Platforms
@@ -15,13 +16,11 @@
 - include: intellij.yml
 - include: virtualbox.yml
 - include: vscode.yml
-- include: vagrant.yml
 - include: vim.yml
 
 # Applications
 - include: discord.yml
 - include: dropbox.yml
-- include: google-chrome.yml
 - include: keepassx.yml
 - include: mailspring.yml
 - include: slack.yml

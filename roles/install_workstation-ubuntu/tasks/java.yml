@@ -1,12 +1,12 @@
 # Installing Oracle Java 9
 
-- name: adding ppa
+- name: adding Java ppa
   apt_repository:
     repo: ppa:linuxuprising/java
     state: present
   register: repo
 
-- name: setting license to selected
+- name: setting oracle license to selected
   shell: /bin/echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
   when: repo.changed
 
@@ -14,7 +14,7 @@
   shell: /bin/echo debconf shared/accepted-oracle-license-v1-1 seen true | /usr/bin/debconf-set-selections
   when: repo.changed
 
-- name: installing java
+- name: installing Java
   apt:
     name: "oracle-java10-set-default"
     update-cache: yes

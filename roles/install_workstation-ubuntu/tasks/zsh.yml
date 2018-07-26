@@ -1,7 +1,13 @@
-- name: Installing zsh
+- name: installing zsh
   apt:
     name: zsh
 
-- name: Installing powerline fonts
+- name: installing powerline fonts
   apt:
     name: fonts-powerline
+
+- name: install oh-my-zsh
+  shell: wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+- name: set zsh as default
+  shell: chsh -s $(which zsh)
