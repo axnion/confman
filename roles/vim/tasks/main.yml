@@ -5,7 +5,7 @@
 - name: creating symlink .vimrc
   become: no
   file:
-    src: ~/dotfiles/vimrc
+    src: "{{ dotfile }}"
     dest: ~/.vimrc
     owner: axnion
     state: link

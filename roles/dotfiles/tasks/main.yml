@@ -26,6 +26,14 @@
     owner: axnion
     state: link
 
+- name: creating symlink .zshrc
+  become: no
+  file:
+    src: ~/dotfiles/zshrc
+    dest: ~/.zshrc
+    force: yes
+    state: link
+
 - name: creating symlink .nanorc
   become: no
   file:

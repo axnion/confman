@@ -15,5 +15,5 @@
 
 - name: installing
   apt:
-    name: "oracle-java10-set-default"
+    name: "oracle-java{{ version }}-set-default"
     update-cache: yes
