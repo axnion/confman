@@ -2,6 +2,6 @@
 - hosts: workstation
   become: yes
   roles:
-    - install_workstation-ubuntu
-    - config_base
+    #- install_workstation-ubuntu
+    #- config_base
     - config_vscode

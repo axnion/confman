@@ -1,9 +1,15 @@
-- name: Installing extensions
+- name: listing installed extensions
+  become: no
+  command: code --list-extensions
+  register: installed_ext
+
+- name: installing extensions
   become: no
   command: code --install-extension {{ item }}
+  when: installed_ext.stdout is not search(item)
   with_items: "{{ extensions }}"
 
-- name: Applying settings.json
+- name: applying settings.json
   become: no
   file:
     src: ~/dotfiles/vscode/settings.json
