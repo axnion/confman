@@ -8,4 +8,4 @@
 
 - name: installing Discord
   command: snap install discord
-  when: result|failed
+  when: result is failed

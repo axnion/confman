@@ -8,5 +8,5 @@
 
 - name: installing Visual Studio Code
   command: snap install --classic vscode
-  when: result|failed
+  when: result is failed
 

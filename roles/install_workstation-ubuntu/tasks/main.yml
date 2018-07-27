@@ -17,6 +17,7 @@
 - include: virtualbox.yml
 - include: vscode.yml
 - include: vim.yml
+- include: postman.yml
 
 # Applications
 - include: discord.yml

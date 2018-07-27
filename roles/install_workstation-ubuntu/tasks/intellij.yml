@@ -8,4 +8,4 @@
 
 - name: intalling IntelliJ Idea Ulimate
   command: snap install --classic intellij-idea-ultimate
-  when: result|failed
+  when: result is failed

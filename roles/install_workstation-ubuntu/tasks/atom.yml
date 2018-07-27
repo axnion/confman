@@ -8,4 +8,4 @@
 
 - name: installing Atom
   command: snap install --classic atom
-  when: result|failed
+  when: result is failed

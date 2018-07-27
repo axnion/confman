@@ -8,4 +8,4 @@
 
 - name: intalling Goland
   command: snap install --classic goland
-  when: result|failed
+  when: result is failed

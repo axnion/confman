@@ -8,4 +8,4 @@
 
 - name: installing Mailspring
   command: snap install mailspring
-  when: result|failed
+  when: result is failed
