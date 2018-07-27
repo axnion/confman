@@ -1,5 +1,0 @@
-# Installing VIM
-- name: installing
-  apt:
-    name: vim
-    state: present

@@ -1,8 +1,0 @@
-# Installing powerline-go with go get
-- name: installing/updating powerline-go
-  become: false
-  command: go get -u github.com/justjanne/powerline-go
-
-- name: installing powerline fonts
-  apt:
-    name: fonts-powerline

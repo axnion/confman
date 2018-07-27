@@ -1,6 +1,0 @@
-# Install terminal multiplexer
-
-- name: installing tmux
-  apt:
-    name: tmux
-    state: present

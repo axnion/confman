@@ -1,5 +1,0 @@
-# Installing virtualbox
-- name: installing
-  apt:
-    name: virtualbox
-    state: present
