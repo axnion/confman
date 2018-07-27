@@ -1,0 +1,11 @@
+# Installing Slack - Ubuntu
+- name: checking if installed
+  become: false
+  shell: type "slack"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing
+  command: snap install --classic slack
+  when: result is failed

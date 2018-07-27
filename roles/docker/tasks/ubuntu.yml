@@ -1,0 +1,30 @@
+# Installing Docker
+- name: intalling dependencies
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - curl
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+
+- name: adding gpg-key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: adding repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable
+    state: present
+
+- name: installing docker
+  apt:
+    name: docker-ce
+    state: present
+
+# Installing Docker Compose
+- name: installing docker-compose
+  apt:
+    name: docker-compose

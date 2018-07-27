@@ -1,0 +1,5 @@
+# Installing VIM - Ubuntu
+- name: installing
+  apt:
+    name: vim
+    state: present

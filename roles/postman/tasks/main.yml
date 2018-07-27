@@ -1,0 +1,3 @@
+# Installing Postman for API testing and development
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"

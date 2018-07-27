@@ -1,0 +1,10 @@
+# Installing Golang - Ubuntu
+- name: adding repository
+  apt_repository:
+    repo: ppa:gophers/archive
+    state: present
+
+- name: installing
+  apt:
+    name: golang-go
+    update_cache: yes

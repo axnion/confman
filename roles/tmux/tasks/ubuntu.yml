@@ -1,0 +1,5 @@
+# Installing tmux - Ubuntu
+- name: installing tmux
+  apt:
+    name: tmux
+    state: present

@@ -1,0 +1,3 @@
+# Installing KeePassX - Open source and cross platform password manager
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"

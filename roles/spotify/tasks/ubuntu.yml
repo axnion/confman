@@ -1,0 +1,11 @@
+# Installing Spotify - Ubuntu
+- name: checking if Spotify is installed
+  become: false
+  shell: type "spotify"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing Spotify
+  command: snap install spotify
+  when: result is failed

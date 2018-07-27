@@ -1,11 +1,11 @@
-# Install NodeJS 10.x
-- name: checking if NodeJS is installed
+# Installing NodeJS - Ubuntu
+- name: checking if installed
   command: node -v
   register: result
   changed_when: no
   ignore_errors: true
 
-- name: downloading NodeJS setup script
+- name: downloading setup script
   get_url:
     url: https://deb.nodesource.com/setup_10.x
     force: yes
@@ -13,19 +13,19 @@
     mode: 0755
   when: result is failed
 
-- name: running NodeJS setup script
+- name: running setup script
   command: /tmp/setup_9.x
   args:
     chdir: /tmp/
   when: result is failed
 
-- name: removing NodeJS setup script
+- name: removing setup script
   file:
     path: /tmp/setup_9.x
     state: absent
   when: result is failed
 
-- name: installing NodeJS
+- name: installing
   apt:
     name: nodejs
     update_cache: yes

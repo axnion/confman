@@ -1,14 +1,21 @@
+# Installing Visual Studio Code
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+
+# Install extensions
 - name: listing installed extensions
   become: no
   command: code --list-extensions
+  changed_when: no
   register: installed_ext
 
-- name: installing extensions
+- name: installing missing extensions
   become: no
   command: code --install-extension {{ item }}
   when: installed_ext.stdout is not search(item)
   with_items: "{{ extensions }}"
 
+# Apply settings
 - name: applying settings.json
   become: no
   file:

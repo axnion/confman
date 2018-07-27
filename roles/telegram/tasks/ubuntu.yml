@@ -1,0 +1,11 @@
+# Installing Telegram - Ubuntu
+- name: checking if Telegram is installed
+  become: false
+  shell: type "telegram-desktop"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: intalling Telegram
+  command: snap install --classic telegram-desktop
+  when: result is failed

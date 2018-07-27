@@ -1,0 +1,10 @@
+# Installing Nvidia drivers - Ubuntu
+- name: adding repository
+  apt_repository:
+    repo: ppa:graphics-drivers/ppa
+    state: present
+
+- name: installing
+  apt:
+    name: nvidia-387
+    update_cache: yes

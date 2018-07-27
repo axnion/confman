@@ -1,0 +1,12 @@
+# Installing Postman - Ubuntu
+- name: checking if installed
+  become: false
+  shell: type "postman"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing
+  command: snap install postman
+  when: result is failed
+

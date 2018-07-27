@@ -1,0 +1,11 @@
+# Installing Atom - Ubuntu
+- name: checking if installed
+  become: false
+  shell: type "atom"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing
+  command: snap install --classic atom
+  when: result is failed

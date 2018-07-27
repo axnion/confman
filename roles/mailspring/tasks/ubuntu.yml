@@ -1,0 +1,11 @@
+# Installing Mailspring - Ubuntu
+- name: checking if Mailspring is installed
+  become: false
+  shell: type "mailspring"
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing Mailspring
+  command: snap install mailspring
+  when: result is failed

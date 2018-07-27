@@ -1,0 +1,3 @@
+# Installing Google Chrome Stable - Web browser from Google
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"

@@ -1,0 +1,3 @@
+# Installing Powerline Go - Powerline, rewritten in Go
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"

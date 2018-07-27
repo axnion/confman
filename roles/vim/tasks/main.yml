@@ -1,0 +1,11 @@
+# Installing VIM
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+
+- name: creating symlink .vimrc
+  become: no
+  file:
+    src: ~/dotfiles/vimrc
+    dest: ~/.vimrc
+    owner: axnion
+    state: link

@@ -2,6 +2,22 @@
 - hosts: workstation
   become: yes
   roles:
-    #- install_workstation-ubuntu
-    #- config_base
-    - config_vscode
+    #- google-chrome
+    #- vim
+    #- spotify
+    #- dropbox
+    #- keepassx
+    #- nvidia-driver
+    #- nodejs
+    #- golang
+    #- java
+    #- vscode
+    #- docker
+    #- zsh
+    #- atom
+    #- postman
+    #- slack
+    #- mailspring
+    #- intellij
+    #- goland
+    #- discord

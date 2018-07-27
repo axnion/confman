@@ -1,0 +1,10 @@
+- name: checking if installed
+  become: false
+  command: vscode -v
+  register: result
+  changed_when: no
+  ignore_errors: true
+
+- name: installing
+  command: snap install --classic vscode
+  when: result is failed
