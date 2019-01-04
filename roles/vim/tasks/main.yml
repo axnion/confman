@@ -9,3 +9,6 @@
     dest: ~/.vimrc
     owner: axnion
     state: link
+
+- name: installing vim plugins
+  shell: vim +PlugInstall +qall
