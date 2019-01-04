@@ -23,7 +23,6 @@
   file:
     src: ~/dotfiles/bashrc
     dest: ~/.bashrc
-    owner: axnion
     state: link
 
 - name: creating symlink .zshrc
@@ -39,5 +38,4 @@
   file:
     src: ~/dotfiles/nanorc
     dest: ~/.nanorc
-    owner: axnion
     state: link

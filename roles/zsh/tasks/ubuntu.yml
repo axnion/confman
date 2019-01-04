@@ -2,6 +2,7 @@
 - name: installing zsh
   apt:
     name: zsh
+  register: zsh
 
 - name: installing powerline fonts
   apt:
@@ -11,14 +12,18 @@
   get_url:
     url: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
     dest: /tmp/oh-my-zsh-installer.sh
+    mode: 0777
+  when: zsh is changed
 
 - name: installing oh-my-zsh
   shell: /tmp/oh-my-zsh-installer.sh
+  when: zsh is changed
 
 - name: get current default shell
   shell: echo $SHELL
   register: shell
+  when: zsh is changed
 
 - name: set zsh as default
   shell: chsh -s $(which zsh)
-  when: shell == "/usr/bin/zsh"
+  when: shell == "/usr/bin/zsh" and zsh is changed

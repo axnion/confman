@@ -7,7 +7,6 @@
   file:
     src: "{{ dotfile }}"
     dest: ~/.vimrc
-    owner: axnion
     state: link
 
 - name: installing vim plugins

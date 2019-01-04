@@ -7,5 +7,4 @@
   file:
     src: "{{ dotfile }}"
     dest: ~/.tmux.conf
-    owner: axnion
     state: link
