@@ -2,9 +2,16 @@
 - include: ubuntu.yml
   when: ansible_distribution == "Ubuntu"
 
-# Installing powerlevel9k theme
 - name: installing powerlevel9k theme
   become: no
   git:
     repo: https://github.com/bhilburn/powerlevel9k.git
     dest: ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+- name: creating symlink .zshrc
+  become: no
+  file:
+    src: "{{ dotfile }}"
+    dest: ~/.zshrc
+    state: link
+

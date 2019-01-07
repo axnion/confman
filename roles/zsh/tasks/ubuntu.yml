@@ -27,3 +27,5 @@
 - name: set zsh as default
   shell: chsh -s $(which zsh)
   when: shell != "/usr/bin/zsh" and zsh is changed
+
+
