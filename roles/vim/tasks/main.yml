@@ -9,7 +9,6 @@
     dest: ~/.vimrc
     state: link
 
-
 - name: creating vim autoload path
   file: 
     path:  ~/.vim/autoload
@@ -23,3 +22,9 @@
 
 - name: installing vim plugins
   shell: vim +PlugInstall +qall
+
+- name: install ack for CtrlSF
+  apt:
+    name: ack-grep
+    state: present
+    
