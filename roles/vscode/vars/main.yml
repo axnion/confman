@@ -1,13 +1,23 @@
 extensions:
-  - vscodevim.vim
-  - Equinusocio.vsc-material-theme
-  - ms-vscode.Go
-  - eamodio.gitlens
-  - dbaeumer.vscode-eslint
-  - PeterJausovec.vscode-docker
-  - eg2.vscode-npm-script
+  - austin.code-gnu-global
+  - chenxsan.vscode-standardjs
   - christian-kohler.npm-intellisense
-  - DavidAnson.vscode-markdownlint
-  - redhat.java
-  - PKief.material-icon-theme
+  - chrmarti.regex
+  - eamodio.gitlens
+  - Equinusocio.vsc-material-theme
+  - felixfbecker.php-intellisense
+  - gerane.Theme-FlatlandMonokai
   - HookyQR.beautify
+  - ikappas.phpcs
+  - Jarga.apib
+  - jpogran.puppet-vscode
+  - maty.vscode-mocha-sidebar
+  - ms-vscode.cpptools
+  - PeterJausovec.vscode-docker
+  - PKief.material-icon-theme
+  - samrapdev.outrun
+  - shardulm94.trailing-spaces
+  - vscodevim.vim
+  - wayou.vscode-todo-highlight
+  - ms-vscode.Go
+  - DavidAnson.vscode-markdownlint
