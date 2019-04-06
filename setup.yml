@@ -12,7 +12,7 @@
     - nvidia-driver
     - caprine
     - spotify
-    #- nodejs
+    - nodejs
     #- docker
     #- postman
     #- mailspring
