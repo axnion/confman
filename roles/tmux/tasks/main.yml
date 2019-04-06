@@ -2,9 +2,12 @@
 - include: ubuntu.yml
   when: ansible_distribution == "Ubuntu"
 
+- include: arch.yml
+  when: ansible_distribution == "Archlinux"
+
 - name: creating symlink .tmux.conf
   become: no
   file:
-    src: "{{ dotfile }}"
-    dest: ~/.tmux.conf
+    src: "{{ dotfiles }}/tmux.conf"
+    dest: "{{ home }}/.tmux.conf"
     state: link

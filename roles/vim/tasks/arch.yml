@@ -1,0 +1,6 @@
+# Installing VIM - Ubuntu
+- name: installing
+  pacman:
+    name: vim
+    state: present
+

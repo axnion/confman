@@ -1,0 +1,5 @@
+# Installing tmux - Ubuntu
+- name: installing tmux
+  pacman:
+    name: tmux
+    state: present

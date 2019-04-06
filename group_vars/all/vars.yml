@@ -1,0 +1,4 @@
+user: "axnion"
+home: "/home/{{ user }}"
+confman: "{{ home }}/Configuration/confman"
+dotfiles: "{{ home }}/Configuration/dotfiles"

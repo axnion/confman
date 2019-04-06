@@ -4,13 +4,13 @@
   roles:
     - vim
     - tmux
-    - zsh
-    - google-chrome
-    - nvidia-driver
-    - nodejs
-    - keepassx
-    - docker
-    - spotify
-    - postman
-    - mailspring
-    - discord
+      #    - zsh
+      #    - google-chrome
+      #    - nvidia-driver
+      #    - nodejs
+      #    - keepassx
+      #    - docker
+      #    - spotify
+      #    - postman
+      #    - mailspring
+      #    - discord
