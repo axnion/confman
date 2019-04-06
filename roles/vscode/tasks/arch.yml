@@ -1,0 +1,8 @@
+# Installing Visual Studio Code
+- name: installing from AUR with yay
+  become: no
+  aur:
+    name: visual-studio-code-bin
+    use: yay
+    skip_installed: true
+

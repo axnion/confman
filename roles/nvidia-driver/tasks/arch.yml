@@ -1,0 +1,4 @@
+- name: installing with pacman
+  pacman:
+    name: nvidia
+    state: present

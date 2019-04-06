@@ -1,3 +1,6 @@
 # Installing Spotify - Music streaming service client
 - include: ubuntu.yml
   when: ansible_distribution == "Ubuntu"
+
+- include: arch.yml
+  when: ansible_distribution == "Archlinux"

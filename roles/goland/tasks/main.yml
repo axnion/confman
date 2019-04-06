@@ -1,3 +1,0 @@
-# Installing GoLand - Go IDE from Jetbrains
-- include: ubuntu.yml
-  when: ansible_distribution == "Ubuntu"

@@ -2,16 +2,41 @@
 - include: ubuntu.yml
   when: ansible_distribution == "Ubuntu"
 
-- name: installing powerlevel9k theme
+- include: arch.yml
+  when: ansible_distribution == "Archlinux"
+
+- name: downloading oh-my-zsh installer
   become: no
-  git:
-    repo: https://github.com/bhilburn/powerlevel9k.git
-    dest: ~/.oh-my-zsh/custom/themes/powerlevel9k
+  get_url:
+    url: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    dest: ~/oh-my-zsh-installer.sh
+    mode: 0777
+  when: zsh is changed
+
+- name: installing oh-my-zsh
+  become: no
+  shell: ~/oh-my-zsh-installer.sh
+  when: zsh is changed
+
+- name: delete installation script
+  become: no
+  file:
+    path: ~/oh-my-zsh-installer.sh
+    state: absent
+
+- name: get current default shell
+  shell: echo $SHELL
+  register: shell
+  when: zsh is changed
+
+- name: set zsh as default
+  shell: "chsh -s $(which zsh) {{ user }}"
+  when: shell != "/usr/bin/zsh" and zsh is changed
 
 - name: creating symlink .zshrc
   become: no
   file:
-    src: "{{ dotfile }}"
-    dest: ~/.zshrc
+    src: "{{ dotfiles }}/zshrc"
+    dest: "{{ home }}/.zshrc"
     state: link
 

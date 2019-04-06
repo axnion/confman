@@ -5,11 +5,6 @@
 - include: arch.yml
   when: ansible_distribution == "Archlinux"
 
-- name: test
-  become: no
-  debug:
-    msg: "{{ ansible_distribution }}"
-
 - name: creating symlink .vimrc
   become: no
   file:

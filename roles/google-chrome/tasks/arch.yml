@@ -1,0 +1,6 @@
+- name: installing from AUR with yay
+  become: no
+  aur:
+    name: google-chrome
+    use: yay
+    skip_installed: true

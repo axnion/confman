@@ -1,3 +1,0 @@
-# Installing IntelliJ Idea Ultimate - Java IDE from Jetbrains
-- include: ubuntu.yml
-  when: ansible_distribution == "Ubuntu"

@@ -1,0 +1,6 @@
+# Install KeepassX
+
+- name: installing Dropbox with pacman
+  pacman:
+    name: keepassx2
+    state: present

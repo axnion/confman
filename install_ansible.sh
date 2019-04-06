@@ -13,10 +13,6 @@ if ! [ -x "$(command -v ansible --version)" ]; then
   elif [ "$DISTRO" = "arch" ]; then
     echo "Installing Ansible for Arch"
     pacman -S ansible --noconfirm
-    yay -Ss ansible-aur-git
+    yay -Ss ansible-aur-git --noconfirm
   fi
 fi
-
-# Run playbook locally
-ansible-playbook --connection=local --ask-become-pass setup.yml
-

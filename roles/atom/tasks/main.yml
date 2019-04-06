@@ -1,3 +1,0 @@
-# Installing Atom - the hackable text editor
-- include: ubuntu.yml
-  when: ansible_distribution == "Ubuntu"

@@ -1,0 +1,8 @@
+# Installing Dropbox
+- name: installing from AUR with yay
+  become: no
+  aur:
+    name: dropbox
+    use: yay
+    skip_installed: true
+

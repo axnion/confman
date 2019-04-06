@@ -1,0 +1,10 @@
+- name: installing zsh from pacman
+  pacman:
+    name: zsh
+    state: present
+  register: zsh
+
+- name: installing zsh-completions from pacman
+  pacman:
+    name: zsh-completions
+    state: present

@@ -2,6 +2,9 @@
 - include: ubuntu.yml
   when: ansible_distribution == "Ubuntu"
 
+- include: arch.yml
+  when: ansible_distribution == "Archlinux"
+
 # Install extensions
 - name: listing installed extensions
   become: no
@@ -19,7 +22,8 @@
 - name: applying settings.json
   become: no
   file:
-    src: ~/Configuration/dotfiles/vscode/settings.json
-    dest: ~/.config/Code/User/settings.json
+    src: "{{ dotfiles }}/vscode.json"
+    dest: "{{ home }}/.config/Code/User/settings.json"
+    follow: false
     force: yes
     state: link

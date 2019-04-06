@@ -1,0 +1,7 @@
+# Installing Discord
+- name: installing Discord from AUR using yay
+  become: no
+  aur:
+    name: discord
+    use: yay
+    skip_installed: true
