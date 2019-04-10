@@ -1,0 +1,9 @@
+- name: installing docker engine with pacman
+  pacman:
+    name: docker
+    state: present
+
+- name: installing docker-compose with pacman
+  pacman:
+    name: docker-compose
+    state: present
